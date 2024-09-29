@@ -55,7 +55,7 @@ Once compiled, run the executable:
 ### 4. Add Elements to the Array
 
 - [x] Implement the `addElement()` function to add elements to the array.
-- [ ] Ensure dynamic resizing when the array reaches its capacity.
+- [x] Ensure dynamic resizing when the array reaches its capacity.
 
 ### 5. Remove Elements from the Array
 
