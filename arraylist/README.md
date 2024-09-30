@@ -57,28 +57,33 @@ Once compiled, run the executable:
 - [x] Implement the `addElement()` function to add elements to the array.
 - [x] Ensure dynamic resizing when the array reaches its capacity.
 
-### 5. Remove Elements from the Array
+### 5. Get Elements from the Array
+
+- [x] Implement the `getElement()` function to get elements.
+- [x] Handle out of bound.
+
+### 6. Remove Elements from the Array
 
 - [ ] Implement the `removeElement()` function to remove elements.
 - [ ] Handle shrinking the array size if necessary.
 
-### 6. Implement Memory Management
+### 7. Implement Memory Management
 
 - [ ] Implement a `freeArrayList()` function to free the dynamically allocated memory.
 - [ ] Ensure all memory is freed properly to avoid memory leaks.
 
-### 7. Test the Array Implementation (`main.c`)
+### 8. Test the Array Implementation (`main.c`)
 
 - [ ] Write test cases to demonstrate adding, removing, and resizing the array.
 - [ ] Test with various data types (int, float, etc.).
 - [ ] Ensure the array handles edge cases (e.g., adding beyond capacity, removing from an empty array).
 
-### 8. Document the Code
+### 9. Document the Code
 
 - [ ] Add comments explaining each function and its purpose.
 - [ ] Ensure the README includes compilation and usage instructions.
 
-### 9. Final Testing and Review
+### 10. Final Testing and Review
 
 - [ ] Run the program and verify correct behavior.
 - [ ] Review for any remaining memory management issues (use `valgrind` to check for memory leaks).
