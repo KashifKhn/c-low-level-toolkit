@@ -1,4 +1,7 @@
 #include "arraylist.h"
+#include <stdio.h>
+#include <strings.h>
+#include <time.h>
 
 bool resize(Array *array);
 
@@ -27,6 +30,15 @@ void add(Array *array, const void *data) {
   memcpy((char *)array->data + (array->size * array->element_size), data,
          array->element_size);
   array->size++;
+}
+
+void *get(const Array *array, int index) {
+  if (index >= array->size) {
+    printf("Error: Array Out of Bound Exceptions %d and size is %zu\n", index,
+           array->size);
+    exit(EXIT_FAILURE);
+  }
+  return (char *)array->data + (index * array->element_size);
 }
 
 bool resize(Array *array) {
