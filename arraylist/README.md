@@ -64,8 +64,8 @@ Once compiled, run the executable:
 
 ### 6. Remove Elements from the Array
 
-- [ ] Implement the `remove_element()` function to remove elements.
-- [ ] Handle shrinking the array size if necessary.
+- [x] Implement the `remove_element()` function to remove elements.
+- [x] Handle shrinking the array size if necessary.
 
 ### 7. Implement Memory Management
 
