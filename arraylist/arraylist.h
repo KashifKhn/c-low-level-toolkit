@@ -25,7 +25,7 @@ Array *init_arraylist(size_t element_size);
  * @param array: Pointer to the array.
  * @param data: Pointer to the data to be added.
  */
-void add(Array *array, const void *data);
+void add_element(Array *array, const void *data);
 
 /*
  * Get an element at the specified index from the array.
@@ -34,14 +34,14 @@ void add(Array *array, const void *data);
  * @return: Pointer to the element at the specified index, or NULL if the index
  * is out of bounds.
  */
-void *get(const Array *array, int index);
+void *get_element(const Array *array, int index);
 
 /*
  * Remove an element at the specified index from the array.
  * @param array: Pointer to the array.
  * @param index: Index of the element to remove.
  */
-void remove_element(Array *array, int index);
+void *remove_element(Array *array, int index);
 
 /*
  * Get the number of elements in the array.

@@ -20,7 +20,7 @@ Array *init_arraylist(size_t element_size) {
   return array;
 }
 
-void add(Array *array, const void *data) {
+void add_element(Array *array, const void *data) {
   if (array->size >= array->capacity) {
     bool is_resize = resize(array);
     if (!is_resize) {
@@ -32,7 +32,7 @@ void add(Array *array, const void *data) {
   array->size++;
 }
 
-void *get(const Array *array, int index) {
+void *get_element(const Array *array, int index) {
   if (index >= array->size) {
     printf("Error: Array Out of Bound Exceptions %d and size is %zu\n", index,
            array->size);
