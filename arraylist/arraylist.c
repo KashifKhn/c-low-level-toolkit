@@ -41,6 +41,30 @@ void *get_element(const Array *array, int index) {
   return (char *)array->data + (index * array->element_size);
 }
 
+void *remove_element(Array *array, int index) {
+  if (index >= array->size) {
+    printf("Error: Array Out of Bound Exceptions %d and size is %zu\n", index,
+           array->size);
+    exit(EXIT_FAILURE);
+  }
+
+  void *value = malloc(array->element_size);
+  if (!value) {
+    printf("Error: Memory allocation failed\n");
+    exit(EXIT_FAILURE);
+  }
+
+  memcpy(value, get_element(array, index), array->element_size);
+
+  memmove((char *)array->data + index * array->element_size,
+          (char *)array->data + (index + 1) * array->element_size,
+          (array->size - index - 1) * array->element_size);
+
+  array->size--;
+
+  return value;
+}
+
 bool resize(Array *array) {
   if (array->size < array->capacity) {
     return false;
