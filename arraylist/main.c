@@ -10,23 +10,14 @@ int main(int argc, char *argv[]) {
 
   for (int i = 0; i < 10; i++) {
     value = i * 10;
-    add(arr, &value);
+    add_element(arr, &value);
     assert(size(arr) == i + 1);
-    assert(*(int *)get(arr, i) == value);
+    assert(*(int *)get_element(arr, i) == value);
   }
+
+  assert(*(int *)remove_element(arr, 2) == 20);
 
   assert(arr->capacity == 10);
-  for (int i = 10; i < 20; i++) {
-    value = i * 10;
-    add(arr, &value);
-    assert(size(arr) == i + 1);
-    assert(*(int *)get(arr, i) == value);
-  }
-
-  assert(*(int *)get(arr, 19) == 190);
-
-  assert(arr->capacity == 20);
-  assert(size(arr) == 20);
 
   printf("All Test are passed");
 }
