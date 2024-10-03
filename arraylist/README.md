@@ -54,17 +54,17 @@ Once compiled, run the executable:
 
 ### 4. Add Elements to the Array
 
-- [x] Implement the `addElement()` function to add elements to the array.
+- [x] Implement the `add_element()` function to add elements to the array.
 - [x] Ensure dynamic resizing when the array reaches its capacity.
 
 ### 5. Get Elements from the Array
 
-- [x] Implement the `getElement()` function to get elements.
+- [x] Implement the `get_element()` function to get elements.
 - [x] Handle out of bound.
 
 ### 6. Remove Elements from the Array
 
-- [ ] Implement the `removeElement()` function to remove elements.
+- [ ] Implement the `remove_element()` function to remove elements.
 - [ ] Handle shrinking the array size if necessary.
 
 ### 7. Implement Memory Management
