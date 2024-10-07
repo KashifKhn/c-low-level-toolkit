@@ -65,6 +65,16 @@ void *remove_element(Array *array, int index) {
   return value;
 }
 
+void free_arraylist(Array *array) {
+  if (array == NULL) {
+    return;
+  }
+  free(array->data);
+  array->data = NULL;
+  free(array);
+  array = NULL;
+}
+
 bool resize(Array *array) {
   if (array->size < array->capacity) {
     return false;
