@@ -1,4 +1,5 @@
 #include "arraylist.h"
+#include <stdbool.h>
 #include <stdio.h>
 #include <strings.h>
 #include <time.h>
@@ -15,6 +16,7 @@ Array *init_arraylist(size_t element_size) {
   array->size = 0;
   array->data = malloc(array->capacity * array->element_size);
   if (array->data == NULL) {
+    free(array);
     return NULL;
   }
   return array;
@@ -33,7 +35,7 @@ void add_element(Array *array, const void *data) {
 }
 
 void *get_element(const Array *array, int index) {
-  if (index >= array->size) {
+  if (index < 0 || index >= array->size) {
     printf("Error: Array Out of Bound Exceptions %d and size is %zu\n", index,
            array->size);
     exit(EXIT_FAILURE);
@@ -42,7 +44,7 @@ void *get_element(const Array *array, int index) {
 }
 
 void *remove_element(Array *array, int index) {
-  if (index >= array->size) {
+  if (index < 0 || index >= array->size) {
     printf("Error: Array Out of Bound Exceptions %d and size is %zu\n", index,
            array->size);
     exit(EXIT_FAILURE);
@@ -62,10 +64,15 @@ void *remove_element(Array *array, int index) {
 
   array->size--;
 
+  // NOTE: the caller is responsible for freeing the returned memory after
+  // removing an element.
+  // NOTE: Caller must free this memory
   return value;
 }
 
 void free_arraylist(Array *array) {
+  // NOTE: The caller still needs to set their pointer to NULL after calling
+  // free_arraylist to avoid using a dangling pointer.
   if (array == NULL) {
     return;
   }
@@ -81,9 +88,9 @@ bool resize(Array *array) {
   }
 
   array->capacity *= 2;
-  Array *newData = realloc(array->data, array->element_size * array->capacity);
+  void *newData = realloc(array->data, array->element_size * array->capacity);
   if (newData == NULL) {
-    return NULL;
+    return false;
   }
   array->data = newData;
   return true;
