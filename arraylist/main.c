@@ -1,6 +1,7 @@
 #include "arraylist.h"
 #include <assert.h>
 #include <stdio.h>
+#include <time.h>
 
 int main(int argc, char *argv[]) {
   Array *arr = init_arraylist(sizeof(int));
@@ -18,6 +19,8 @@ int main(int argc, char *argv[]) {
   assert(*(int *)remove_element(arr, 2) == 20);
 
   assert(arr->capacity == 10);
+
+  free_arraylist(arr);
 
   printf("All Test are passed");
 }
