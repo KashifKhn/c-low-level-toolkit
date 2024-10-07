@@ -70,7 +70,7 @@ Once compiled, run the executable:
 ### 7. Implement Memory Management
 
 - [x] Implement a `freeArrayList()` function to free the dynamically allocated memory.
-- [ ] Ensure all memory is freed properly to avoid memory leaks.
+- [x] Ensure all memory is freed properly to avoid memory leaks.
 
 ### 8. Test the Array Implementation (`main.c`)
 
