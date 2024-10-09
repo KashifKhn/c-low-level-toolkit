@@ -89,9 +89,9 @@ Once compiled, run the valgrind:
 
 ### 8. Test the Array Implementation (`main.c`)
 
-- [ ] Write test cases to demonstrate adding, removing, and resizing the array.
-- [ ] Test with various data types (int, float, etc.).
-- [ ] Ensure the array handles edge cases (e.g., adding beyond capacity, removing from an empty array).
+- [x] Write test cases to demonstrate adding, removing, and resizing the array.
+- [x] Test with various data types (int, float, etc.).
+- [x] Ensure the array handles edge cases (e.g., adding beyond capacity, removing from an empty array).
 
 ### 9. Document the Code
 
