@@ -105,10 +105,9 @@ Once compiled, run the valgrind:
 
 ### 10. Document the Code
 
-- [ ] Add comments explaining each function and its purpose.
-- [ ] Ensure the README includes compilation and usage instructions.
+- [x] Ensure the README includes compilation and usage instructions.
 
 ### 11. Final Testing and Review
 
-- [ ] Run the program and verify correct behavior.
-- [ ] Review for any remaining memory management issues (use `valgrind` to check for memory leaks).
+- [x] Run the program and verify correct behavior.
+- [x] Review for any remaining memory management issues (use `valgrind` to check for memory leaks).
