@@ -18,6 +18,7 @@ This project demonstrates the implementation of a generic dynamic array (similar
 
 - C compiler (GCC or Clang)
 - Basic understanding of data structures and pointers in C
+- valgrind (if test for memory leaks)
 
 ## Compilation
 
@@ -33,6 +34,20 @@ Once compiled, run the executable:
 
 ```bash
 ./arraylist
+```
+
+## Running the Valgrind Test for Memory Leaks
+
+Once compiled, run the valgrind:
+
+```bash
+
+ valgrind --leak-check=full \
+         --show-leak-kinds=all \
+         --track-origins=yes \
+         --verbose \
+         --log-file=valgrind-out.txt \
+         ./test_arraylist
 ```
 
 ## Checklist
