@@ -53,6 +53,14 @@ void *remove_element(Array *array, int index);
 void remove_element_free(Array *array, int index);
 
 /*
+ * Prints the elements of the array using a provided print function.
+ * @param arr: Pointer to the array.
+ * @param print_func: Function pointer to a function that prints individual
+ * elements.
+ */
+void print_array(Array *arr, void (*print_func)(void *));
+
+/*
  * Get the number of elements in the array.
  * @param array: Pointer to the array.
  * @return: The number of elements in the array.
