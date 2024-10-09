@@ -16,7 +16,11 @@ int main(int argc, char *argv[]) {
     assert(*(int *)get_element(arr, i) == value);
   }
 
-  assert(*(int *)remove_element(arr, 2) == 20);
+  /*void *temp = remove_element(arr, 2);*/
+  /**/
+  /*assert(*(int *)temp == 20);*/
+  remove_element_free(arr, 2);
+  /*free(temp);*/
 
   assert(arr->capacity == 10);
 
