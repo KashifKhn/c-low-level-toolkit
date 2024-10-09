@@ -84,8 +84,8 @@ Once compiled, run the valgrind:
 
 ### 7. Print Elements from the Array
 
-- [ ] Implement the `print_array()` function to display elements.
-- [ ] Handle printing different data types using function pointers.
+- [x] Implement the `print_array()` function to display elements.
+- [x] Handle printing different data types using function pointers.
 
 ### 8. Implement Memory Management
 
