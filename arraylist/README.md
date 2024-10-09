@@ -50,6 +50,11 @@ Once compiled, run the valgrind:
          ./test_arraylist
 ```
 
+## Usage
+
+- For detailed usage instructions, see [Usage.md](Usage.md).
+- Check out the `main.c`for detail example in test.
+
 ## Checklist
 
 ### 1. Create the project structure
