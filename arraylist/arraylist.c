@@ -84,6 +84,12 @@ void remove_element_free(Array *array, int index) {
   array->size--;
 }
 
+void print_array(Array *arr, void (*print_func)(void *)) {
+  for (size_t i = 0; i < arr->size; i++) {
+    print_func(get_element(arr, i));
+  }
+}
+
 void free_arraylist(Array *array) {
   // NOTE: The caller still needs to set their pointer to NULL after calling
   // free_arraylist to avoid using a dangling pointer.
