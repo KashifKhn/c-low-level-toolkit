@@ -14,8 +14,8 @@ This repository is dedicated to exploring low-level C programming, focusing on D
 
 Start with basic and advanced data structures, implementing each from scratch with a focus on manual memory management.
 
-- [ ] Implement a generic dynamic array (`ArrayList`) - **In Progress**
-- [ ] Implement a linked list
+- [x] Implement a generic dynamic array (`ArrayList`)
+- [ ] Implement a linked list (`Linklist`) - **In Progress**
 - [ ] Implement a stack
 - [ ] Implement a queue
 - [ ] Implement a hash table
