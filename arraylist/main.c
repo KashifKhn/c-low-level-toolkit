@@ -12,6 +12,20 @@ void test_int_array();
 void test_struct();
 void test_double_array();
 
+void test_print_int();
+void test_print_float();
+void test_print_double();
+void test_print_char();
+void test_print_string();
+void test_print_struct();
+
+void print_int(void *data);
+void print_float(void *data);
+void print_double(void *data);
+void print_char(void *data);
+void print_string(void *data);
+void print_employee(void *data);
+
 int main(int argc, char *argv[]) {
   test_int();
   test_float();
@@ -21,6 +35,13 @@ int main(int argc, char *argv[]) {
   test_int_array();
   test_struct();
   test_double_array();
+
+  test_print_int();
+  test_print_float();
+  test_print_double();
+  test_print_char();
+  test_print_string();
+  test_print_struct();
 
   printf("All tests passed!\n");
   return 0;
@@ -211,4 +232,122 @@ void test_double_array() {
 
   free_arraylist(double_arr_arr);
   printf("Double array test passed!\n");
+}
+
+void print_int(void *data) { printf("%d ", *(int *)data); }
+
+void print_float(void *data) { printf("%f ", *(float *)data); }
+
+void print_double(void *data) { printf("%lf ", *(double *)data); }
+
+void print_char(void *data) { printf("%c ", *(char *)data); }
+
+void print_string(void *data) { printf("%s ", *(char **)data); }
+
+void print_employee(void *data) {
+  Employee *emp = (Employee *)data;
+  printf("ID: %d, Name: %s, Salary: %.2f\n", emp->id, emp->name, emp->salary);
+}
+
+void test_print_int() {
+  printf("Testing print int...\n");
+  Array *int_arr = init_arraylist(sizeof(int));
+  assert(int_arr != NULL);
+
+  for (int i = 0; i < 10; i++) {
+    add_element(int_arr, &i);
+  }
+
+  print_array(int_arr, print_int);
+  printf("\n");
+
+  free_arraylist(int_arr);
+  printf("Print int test passed!\n");
+}
+
+void test_print_float() {
+  printf("Testing print float...\n");
+  Array *float_arr = init_arraylist(sizeof(float));
+  assert(float_arr != NULL);
+
+  float f = 0.0;
+  for (int i = 0; i < 10; i++) {
+    f = (float)i * 1.5;
+    add_element(float_arr, &f);
+  }
+
+  print_array(float_arr, print_float);
+  printf("\n");
+
+  free_arraylist(float_arr);
+  printf("Print float test passed!\n");
+}
+
+void test_print_double() {
+  printf("Testing print double...\n");
+  Array *double_arr = init_arraylist(sizeof(double));
+  assert(double_arr != NULL);
+
+  for (int i = 0; i < 10; i++) {
+    double d = (double)i * 1.23456789;
+    add_element(double_arr, &d);
+  }
+
+  print_array(double_arr, print_double);
+  printf("\n");
+
+  free_arraylist(double_arr);
+  printf("Print double test passed!\n");
+}
+
+void test_print_char() {
+  printf("Testing print char...\n");
+  Array *char_arr = init_arraylist(sizeof(char));
+  assert(char_arr != NULL);
+
+  for (char c = 'a'; c <= 'z'; c++) {
+    add_element(char_arr, &c);
+  }
+
+  print_array(char_arr, print_char);
+  printf("\n");
+
+  free_arraylist(char_arr);
+  printf("Print char test passed!\n");
+}
+
+void test_print_string() {
+  printf("Testing print string...\n");
+  Array *string_arr = init_arraylist(sizeof(char *));
+  assert(string_arr != NULL);
+
+  const char *strings[] = {"Hello", "World", "Dynamic", "Array", "Test"};
+  for (int i = 0; i < 5; i++) {
+    add_element(string_arr, &strings[i]);
+  }
+
+  print_array(string_arr, print_string);
+  printf("\n");
+
+  free_arraylist(string_arr);
+  printf("Print string test passed!\n");
+}
+
+void test_print_struct() {
+  printf("Testing print struct...\n");
+  Array *struct_arr = init_arraylist(sizeof(Employee));
+  assert(struct_arr != NULL);
+
+  Employee employees[] = {
+      {1, "Alice", 50000.0}, {2, "Bob", 60000.0}, {3, "Charlie", 70000.0}};
+
+  for (int i = 0; i < 3; i++) {
+    add_element(struct_arr, &employees[i]);
+  }
+
+  print_array(struct_arr, print_employee);
+  printf("\n");
+
+  free_arraylist(struct_arr);
+  printf("Print struct test passed!\n");
 }
