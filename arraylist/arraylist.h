@@ -39,8 +39,18 @@ void *get_element(const Array *array, int index);
  * Remove an element at the specified index from the array.
  * @param array: Pointer to the array.
  * @param index: Index of the element to remove.
+ * @return: Pointer to the element at the specified index which is removed, or
+ * NULL if the index is out of bounds.
  */
 void *remove_element(Array *array, int index);
+
+/*
+ * Remove an element at the specified index from the array with Free memory it's
+ * self.
+ * @param array: Pointer to the array.
+ * @param index: Index of the element to remove.
+ */
+void remove_element_free(Array *array, int index);
 
 /*
  * Get the number of elements in the array.
