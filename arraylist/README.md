@@ -82,23 +82,28 @@ Once compiled, run the valgrind:
 - [x] Implement the `remove_element()` function to remove elements.
 - [x] Handle shrinking the array size if necessary.
 
-### 7. Implement Memory Management
+### 7. Print Elements from the Array
+
+- [ ] Implement the `print_array()` function to display elements.
+- [ ] Handle printing different data types using function pointers.
+
+### 8. Implement Memory Management
 
 - [x] Implement a `freeArrayList()` function to free the dynamically allocated memory.
 - [x] Ensure all memory is freed properly to avoid memory leaks.
 
-### 8. Test the Array Implementation (`main.c`)
+### 9. Test the Array Implementation (`main.c`)
 
 - [x] Write test cases to demonstrate adding, removing, and resizing the array.
 - [x] Test with various data types (int, float, etc.).
 - [x] Ensure the array handles edge cases (e.g., adding beyond capacity, removing from an empty array).
 
-### 9. Document the Code
+### 10. Document the Code
 
 - [ ] Add comments explaining each function and its purpose.
 - [ ] Ensure the README includes compilation and usage instructions.
 
-### 10. Final Testing and Review
+### 11. Final Testing and Review
 
 - [ ] Run the program and verify correct behavior.
 - [ ] Review for any remaining memory management issues (use `valgrind` to check for memory leaks).
