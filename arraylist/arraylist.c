@@ -70,6 +70,21 @@ void *remove_element(Array *array, int index) {
   return value;
 }
 
+void remove_element_free(Array *array, int index) {
+
+  if (index < 0 || index >= array->size) {
+    printf("Error: Array Out of Bound Exceptions %d and size is %zu\n", index,
+           array->size);
+    exit(EXIT_FAILURE);
+  }
+
+  memmove((char *)array->data + index * array->element_size,
+          (char *)array->data + (index + 1) * array->element_size,
+          (array->size - index - 1) * array->element_size);
+
+  array->size--;
+}
+
 void free_arraylist(Array *array) {
   // NOTE: The caller still needs to set their pointer to NULL after calling
   // free_arraylist to avoid using a dangling pointer.
