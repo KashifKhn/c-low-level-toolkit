@@ -5,6 +5,7 @@
 !*/
 
 # Do not ignore specific file types
+!Makefile
 !*.c
 !*.h
 !*.md
