@@ -36,6 +36,34 @@ Once compiled, run the executable:
 ./arraylist
 ```
 
+## Using Make
+
+Alternatively, you can use `make` to compile, run, and clean up the project:
+
+### Build the project:
+
+```bash
+make
+```
+
+### Run the program:
+
+```bash
+./main
+```
+
+### Clean the project:
+
+```bash
+make clean
+```
+
+### Run Valgrind:
+
+```bash
+make valgrind
+```
+
 ## Running the Valgrind Test for Memory Leaks
 
 Once compiled, run the valgrind:
