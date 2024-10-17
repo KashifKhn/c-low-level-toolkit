@@ -87,8 +87,8 @@ valgrind --leak-check=full \
 
 ### 1. Create the Project Structure
 
-- [ ] Create the main project directory.
-- [ ] Add the files `singly_linklist.h`, `singly_linklist.c`, and `main.c`.
+- [x] Create the main project directory.
+- [x] Add the files `singly_linklist.h`, `singly_linklist.c`, and `main.c`.
 
 ### 2. Design the Singly Linked List Structure
 
