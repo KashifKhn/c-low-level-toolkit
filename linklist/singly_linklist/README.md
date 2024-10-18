@@ -92,8 +92,8 @@ valgrind --leak-check=full \
 
 ### 2. Design the Singly Linked List Structure
 
-- [ ] Define the singly linked list node structure in `singly_linklist.h` (node with data and a pointer to the next node).
-- [ ] Declare necessary function prototypes (e.g., `init_list`, `add_at_start`, `add_at_end`, `remove_at_start`, `remove_at_end`, `find_node`, `is_empty`).
+- [x] Define the singly linked list node structure in `singly_linklist.h` (node with data and a pointer to the next node).
+- [x] Declare necessary function prototypes (e.g., `init_list`, `add_at_start`, `add_at_end`, `remove_at_start`, `remove_at_end`, `find_node`, `is_empty`).
 
 ### 3. Implement Linked List Initialization (`singly_linklist.c`)
 
